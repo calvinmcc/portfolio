@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 
-const Banner = () => {
-    return (
-      <div style={divStyle}>Hi</div>
-    )
-  };
+const Banner = React.createClass({
+  render() {
 
-const divStyle = {
-  color: 'blue',
-  width: '100vw',
-  height: '40vh',
-  backgroundColor: "rgb(0, 0, 0)",
-  margin: 0
-};
+    const divStyle = {
+      width: '100vw',
+      height: '80vh',
+      backgroundColor: this.props.bgColor,
+      margin: 0,
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      padding: 10
+    };
+
+    return (
+      <div style={divStyle}>{this.props.children}</div>
+    )
+  }
+});
+
 
 export default Banner;
