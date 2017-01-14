@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 
 const Banner = React.createClass({
   render() {
-
-    const divStyle = {
+    const { bgColor, spacing } = this.props
+    const bannerStyle = {
       width: '100vw',
       height: '80vh',
-      backgroundColor: this.props.bgColor,
+      backgroundColor: bgColor,
       margin: 0,
       display: 'flex',
-      justifyContent: 'space-around',
+      justifyContent: spacing,
       alignItems: 'center',
-      padding: 10
+      padding: 10,
+      flexWrap: 'wrap'
     };
 
     return (
-      <div style={divStyle}>{this.props.children}</div>
+      <div style={bannerStyle}>{this.props.children}</div>
     )
   }
 });
