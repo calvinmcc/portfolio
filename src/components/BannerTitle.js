@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 
-const BannerTitle = () => {
+const BannerTitle = (props) => {
 
   const bannerTitleStyle = {
     display: 'flex',
     flex: 1,
-    alignContent: 'space-around',
-    paddingLeft: '1em',
+    justifyContent: 'space-around',
+    flexDirection: 'column',
+    alignItems: 'space-around',
+    paddingLeft: '2vw',
     width: '5vw',
-    height: 100,
+    height: 'auto',
     backgroundColor: "white"
+  };
+
+  function renderTitle() {
+    var letters = props.title.split('')
+    return letters.map(letter =>
+      <div>{letter}</div>
+    );
   }
 
   return(
-    <div>
-      <div style={bannerTitleStyle}>d</div>
-      <div style={bannerTitleStyle}>d</div>
-      <div style={bannerTitleStyle}>d</div>
-      <div style={bannerTitleStyle}>d</div>
-      <div style={bannerTitleStyle}>d</div>
-      <div style={bannerTitleStyle}>d</div>
-    </div>
+    <div style={bannerTitleStyle}>{renderTitle()}</div>
   )
 };
 

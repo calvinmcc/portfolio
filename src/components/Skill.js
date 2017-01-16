@@ -5,11 +5,11 @@ const Skill = () => {
   const picStyle = {
     width: '7vw',
     height: '7vw',
-    padding: '2em',
+    padding: '1vw',
     backgroundColor: 'white',
     borderRadius: '50%',
     flex: 'none',
-    margin: '.6em'
+    margin: '.6vw'
     }
 
   return(
