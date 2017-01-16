@@ -4,19 +4,27 @@ import Banner from './components/Banner';
 import MainPicture from './components/MainPicture';
 import Bio from './components/Bio';
 import Skill from './components/Skill';
+import BannerTitle from './components/BannerTitle';
+import BannerContent from './components/BannerContent';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Banner bgColor="rgb(0, 0, 0)" spacing="space-around">
-
+        <Banner bgColor="rgb(0, 0, 0)">
+          <BannerTitle />
+          <BannerContent spacing="space-around"></BannerContent>
         </Banner>
-        <Banner bgColor="rgb(173, 75, 75)" spacing="space-around">
-          <MainPicture />
-          <Bio />
+        <Banner bgColor="rgb(173, 75, 75)">
+          <BannerTitle />
+          <BannerContent spacing="space-around">
+            <MainPicture />
+            <Bio />
+          </BannerContent>
         </Banner>
-        <Banner bgColor="rgb(94, 194, 182)" spacing="space-between">
+        <Banner bgColor="rgb(94, 194, 182)">
+          <BannerTitle />
+          <BannerContent spacing="space-between">
             <Skill />
             <Skill />
             <Skill />
@@ -41,6 +49,7 @@ class App extends Component {
             <Skill />
             <Skill />
             <Skill />
+          </BannerContent>
         </Banner>
       </div>
     );

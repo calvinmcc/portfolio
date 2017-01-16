@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 const Skill = () => {
 
   const picStyle = {
-    width: '12vw',
-    height: '12vw',
+    width: '7vw',
+    height: '7vw',
+    padding: '2em',
     backgroundColor: 'white',
     borderRadius: '50%',
-    flex: 'none'
+    flex: 'none',
+    margin: '.6em'
     }
 
   return(
