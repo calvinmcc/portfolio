@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const Bio = () => {
   const bioStyle = {
     backgroundColor: 'white',
-    height: '40vh',
+    height: '50vh',
     flex: .8
   }
 

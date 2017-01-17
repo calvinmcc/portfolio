@@ -4,20 +4,18 @@ const BannerTitle = (props) => {
 
   const bannerTitleStyle = {
     display: 'flex',
-    flex: 1,
+    flex: .6,
     justifyContent: 'space-around',
     flexDirection: 'column',
-    alignItems: 'space-around',
-    paddingLeft: '2vw',
-    width: '5vw',
+    alignItems: 'center',
     height: 'auto',
     backgroundColor: "white"
   };
 
   function renderTitle() {
     var letters = props.title.split('')
-    return letters.map(letter =>
-      <div>{letter}</div>
+    return letters.map((letter, index) =>
+      <div key={index}>{letter}</div>
     );
   }
 
