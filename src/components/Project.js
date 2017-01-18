@@ -2,7 +2,7 @@ import React from 'react';
 
 const Project = (props) => {
   const projectStyle = {
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0)',
     width: '34vw',
     height: '34vw',
     margin: '1em',
@@ -12,12 +12,13 @@ const Project = (props) => {
     borderRadius: '2%',
     fontFamily: 'Hind Vadodara',
     textAlign: 'justify',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    color: 'white'
   }
 
   const imageStyle ={
     width: '34vw',
-    height: 'auto',
+    height: '20vw',
     borderRadius: '2%'
   }
 

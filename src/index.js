@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import FontAwesome from 'react-fontawesome';
 import Banner from './components/Banner';
 import MainPicture from './components/MainPicture';
 import Bio from './components/Bio';
@@ -8,6 +9,7 @@ import BannerTitle from './components/BannerTitle';
 import BannerContent from './components/BannerContent';
 import Project from './components/Project';
 import MainTitle from './components/MainTitle';
+import Contact from './components/Contact';
 
 class App extends Component {
   render() {
@@ -48,10 +50,22 @@ class App extends Component {
       'mongo', 'node', 'postgresql', 'ajax', 'rspec',
     ]
 
+    const contacts = [
+      'facebook-official', 'github-alt', 'envelope', 'instagram',
+      'linkedin-square', 'twitter', 'angellist'
+    ]
+
     function renderImage() {
       var images = skills
       return images.map((image, index) =>
         <Skill key={index} background={image}/>
+      );
+    }
+
+    function renderContact() {
+      var contactIcons = contacts
+      return contactIcons.map((contact, index) =>
+        <Contact key={index} contactName={contact}/>
       );
     }
 
@@ -65,27 +79,39 @@ class App extends Component {
                      />
           </BannerContent>
         </Banner>
-        <Banner bgColor="rgba(47, 40, 43, 0.9)" bgImage="">
+
+        <Banner bgColor="rgb(47, 40, 43)" bgImage="" border="black">
           <BannerTitle title="BIO" bgColor="black" fontColor="white" />
           <BannerContent spacing="space-around">
             <MainPicture />
             <Bio />
           </BannerContent>
         </Banner>
-        <Banner bgColor="white">
+
+        <Banner bgColor="white" border="rgb(47, 40, 43)">
           <BannerContent spacing="space-between">
             {renderImage()}
           </BannerContent>
           <BannerTitle title="SKILLS"
-                       bgColor="rgba(47, 40, 43, 0.9)"
+                       bgColor="rgb(47, 40, 43)"
                        fontColor="white"/>
         </Banner>
-        <Banner bgColor="rgba(31, 33, 75, 0.9)" bgImage="">
+
+        <Banner bgColor="rgb(31, 33, 75)" bgImage="" border="white">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-around">
             <Project projectContent={projects[0]}/>
             <Project projectContent={projects[1]}/>
           </BannerContent>
+        </Banner>
+
+        <Banner bgColor="rgb(71, 121, 173)" bgImage="" border="rgb(31, 33, 75)">
+          <BannerContent spacing="space-around">
+            {renderContact()}
+          </BannerContent>
+          <BannerTitle title="CONTACT"
+                       bgColor="rgb(31, 33, 75)"
+                       fontColor="white" />
         </Banner>
       </div>
     );
