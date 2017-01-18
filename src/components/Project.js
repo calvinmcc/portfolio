@@ -9,7 +9,10 @@ const Project = (props) => {
     padding: '1em',
     overflow: 'scroll',
     fontSize: '1 rem',
-    borderRadius: '2%'
+    borderRadius: '2%',
+    fontFamily: 'Hind Vadodara',
+    textAlign: 'justify',
+    textDecoration: 'none'
   }
 
   const imageStyle ={
@@ -23,7 +26,10 @@ const Project = (props) => {
   return(
     <div style={projectStyle}>
       <a href={link}><img style={imageStyle} src={image} /></a>
-      <h3><a href={link}>{title}</a></h3>
+      <h3><a href={link} style={{fontFamily: 'Russo One',
+                                 size: '2vw',
+                                 textDecoration: 'none',
+                                 fontColor: 'black'}}>{title}</a></h3>
       <p>{description}</p>
       <h5><a href={source}>Source Code</a></h5>
     </div>
