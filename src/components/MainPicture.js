@@ -5,8 +5,10 @@ const MainPicture = () => {
   const picStyle = {
     width: '30vw',
     height: '30vw',
-    backgroundColor: 'white',
-    borderRadius: '50%'
+    backgroundImage: `url(hi.jpg)`,
+    borderRadius: '50%',
+    backgroundPosition: 'center',
+    backgroundSize: '100%'
   }
 
   return(

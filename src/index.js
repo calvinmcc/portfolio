@@ -7,6 +7,7 @@ import Skill from './components/Skill';
 import BannerTitle from './components/BannerTitle';
 import BannerContent from './components/BannerContent';
 import Project from './components/Project';
+import MainTitle from './components/MainTitle';
 
 class App extends Component {
   render() {
@@ -57,10 +58,15 @@ class App extends Component {
     return (
       <div>
         <Banner bgColor="" bgImage="background.JPG">
-          <BannerContent spacing="space-around"></BannerContent>
+          <BannerContent spacing="space-around">
+            <MainTitle title="Calvin Everett McConnell"
+                       subheading1="Web Developer"
+                       subheading2="Vancouver, BC"
+                     />
+          </BannerContent>
         </Banner>
-        <Banner bgColor="rgb(173, 75, 75)" bgImage="">
-          <BannerTitle title="BIO" />
+        <Banner bgColor="rgba(47, 40, 43, 0.9)" bgImage="">
+          <BannerTitle title="BIO" bgColor="black" fontColor="white" />
           <BannerContent spacing="space-around">
             <MainPicture />
             <Bio />
@@ -70,10 +76,12 @@ class App extends Component {
           <BannerContent spacing="space-between">
             {renderImage()}
           </BannerContent>
-          <BannerTitle title="SKILLS" />
+          <BannerTitle title="SKILLS"
+                       bgColor="rgba(47, 40, 43, 0.9)"
+                       fontColor="white"/>
         </Banner>
-        <Banner bgColor="rgb(184, 148, 96)" bgImage="">
-          <BannerTitle title="PROJECTS" />
+        <Banner bgColor="rgba(31, 33, 75, 0.9)" bgImage="">
+          <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-around">
             <Project projectContent={projects[0]}/>
             <Project projectContent={projects[1]}/>

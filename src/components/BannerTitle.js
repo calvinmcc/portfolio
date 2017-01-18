@@ -9,7 +9,9 @@ const BannerTitle = (props) => {
     flexDirection: 'column',
     alignItems: 'center',
     height: 'auto',
-    backgroundColor: "white"
+    backgroundColor: props.bgColor,
+    color: props.fontColor,
+    fontFamily: 'Russo One'
   };
 
   function renderTitle() {
