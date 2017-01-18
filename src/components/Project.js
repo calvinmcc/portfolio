@@ -7,12 +7,15 @@ const Project = (props) => {
     height: '34vw',
     margin: '1em',
     padding: '1em',
-    overflow: 'scroll'
+    overflow: 'scroll',
+    fontSize: '1 rem',
+    borderRadius: '2%'
   }
 
   const imageStyle ={
     width: '34vw',
-    height: 'auto'
+    height: 'auto',
+    borderRadius: '2%'
   }
 
   const { title, description, source, link, image } = props.projectContent

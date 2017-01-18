@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-const Skill = () => {
+const Skill = (props) => {
 
   const picStyle = {
     width: '7vw',
     height: '7vw',
     padding: '1vw',
-    backgroundColor: 'white',
-    borderRadius: '50%',
+    backgroundImage: `url(${props.background}.png)`,
+    backgroundSize: '70%',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
     flex: 'none',
     margin: '.6vw'
     }

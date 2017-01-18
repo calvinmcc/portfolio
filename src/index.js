@@ -41,48 +41,38 @@ class App extends Component {
       }
     ];
 
+    const skills = [
+      'ruby', 'rails', 'react', 'html', 'css', 'js', 'rwd', 'sass', 'express',
+      'rn', 'bootstrap', 'git', 'github','google', 'HerokuLogo', 'coffee', 'jquery', 'json',
+      'mongo', 'node', 'postgresql', 'ajax', 'rspec',
+    ]
+
+    function renderImage() {
+      var images = skills
+      return images.map((image, index) =>
+        <Skill key={index} background={image}/>
+      );
+    }
+
     return (
       <div>
-        <Banner bgColor="rgb(0, 0, 0)">
+        <Banner bgColor="" bgImage="background.JPG">
           <BannerContent spacing="space-around"></BannerContent>
         </Banner>
-        <Banner bgColor="rgb(173, 75, 75)">
+        <Banner bgColor="rgb(173, 75, 75)" bgImage="">
           <BannerTitle title="BIO" />
           <BannerContent spacing="space-around">
             <MainPicture />
             <Bio />
           </BannerContent>
         </Banner>
-        <Banner bgColor="rgb(94, 194, 182)">
+        <Banner bgColor="white">
           <BannerContent spacing="space-between">
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
+            {renderImage()}
           </BannerContent>
           <BannerTitle title="SKILLS" />
         </Banner>
-        <Banner bgColor="rgb(184, 148, 96)">
+        <Banner bgColor="rgb(184, 148, 96)" bgImage="">
           <BannerTitle title="PROJECTS" />
           <BannerContent spacing="space-around">
             <Project projectContent={projects[0]}/>

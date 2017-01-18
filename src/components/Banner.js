@@ -7,7 +7,11 @@ const Banner = (props) => {
       justifyContent: 'space-between',
       width: '100vw',
       height: '80vh',
-      backgroundColor: props.bgColor
+      backgroundColor: props.bgColor,
+      backgroundImage: `url(${props.bgImage})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center'
     };
 
     return (
