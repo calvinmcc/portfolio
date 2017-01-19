@@ -51,8 +51,13 @@ class App extends Component {
     ]
 
     const contacts = [
-      'facebook-official', 'github-alt', 'envelope', 'instagram',
-      'linkedin-square', 'twitter', 'angellist'
+      ['facebook-official', 'https://www.facebook.com/calvin.mcconnell'],
+      ['github-alt', 'https://github.com/calvinmcc'],
+      ['envelope', 'mailto:calvin.mcconnell20@gmail.com'],
+      ['instagram', 'https://www.instagram.com/calvin.mcconnell'],
+      ['linkedin-square', 'https://ca.linkedin.com/in/calvin-mcconnell'],
+      ['twitter', 'https://twitter.com/CalvinMcConne12'],
+      ['angellist', 'https://angel.co/calvin-mcconnell']
     ]
 
     function renderImage() {
@@ -65,7 +70,9 @@ class App extends Component {
     function renderContact() {
       var contactIcons = contacts
       return contactIcons.map((contact, index) =>
-        <Contact key={index} contactName={contact}/>
+        <a key={index} href={contact[1]}>
+          <Contact key={index} contactName={contact[0]}/>
+        </a>
       );
     }
 
@@ -80,7 +87,7 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="rgb(47, 40, 43)" bgImage="" border="black">
+        <Banner bgColor="rgb(47, 40, 43)" bgImage="">
           <BannerTitle title="BIO" bgColor="black" fontColor="white" />
           <BannerContent spacing="space-around">
             <MainPicture />
@@ -88,7 +95,7 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="white" border="rgb(47, 40, 43)">
+        <Banner bgColor="white">
           <BannerContent spacing="space-between">
             {renderImage()}
           </BannerContent>
@@ -97,7 +104,7 @@ class App extends Component {
                        fontColor="white"/>
         </Banner>
 
-        <Banner bgColor="rgb(31, 33, 75)" bgImage="" border="white">
+        <Banner bgColor="rgb(31, 33, 75)" bgImage="">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-around">
             <Project projectContent={projects[0]}/>
@@ -105,7 +112,7 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="rgb(71, 121, 173)" bgImage="" border="rgb(31, 33, 75)">
+        <Banner bgColor="rgb(71, 121, 173)" bgImage="">
           <BannerContent spacing="space-around">
             {renderContact()}
           </BannerContent>

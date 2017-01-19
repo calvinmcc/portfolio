@@ -7,10 +7,11 @@ const Contact = (props) => {
     width: '7vw',
     height: '7vw',
     display: 'flex',
-    position: 'auto'
+    position: 'auto',
+    marginLeft: '5vw'
   }
   return(
-    <FontAwesome style={contactStyle} name={props.contactName} size='2x' />
+    <FontAwesome style={contactStyle} name={props.contactName} size='3x' />
   )
 }
 

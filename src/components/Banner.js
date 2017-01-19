@@ -11,8 +11,7 @@ const Banner = (props) => {
       backgroundImage: `url(${props.bgImage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      borderBottom: `3px solid ${props.border}`
+      backgroundPosition: 'center'
     };
 
     return (
