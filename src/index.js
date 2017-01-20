@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FontAwesome from 'react-fontawesome';
+import ReactTooltip from 'react-tooltip';
 import Banner from './components/Banner';
 import MainPicture from './components/MainPicture';
 import Bio from './components/Bio';
@@ -45,9 +46,29 @@ class App extends Component {
     ];
 
     const skills = [
-      'ruby', 'rails', 'react', 'html', 'css', 'js', 'rwd', 'sass', 'express',
-      'rn', 'bootstrap', 'git', 'github','google', 'HerokuLogo', 'coffee', 'jquery', 'json',
-      'mongo', 'node', 'postgresql', 'ajax', 'rspec',
+      ['ruby', 'Ruby'],
+      ['rails', 'Ruby on Rails'],
+      ['react', 'React.js'],
+      ['html', 'HTML'],
+      ['css', 'CSS'],
+      ['js', 'JavaScript'],
+      ['rwd', 'Responsive Web Design'],
+      ['sass', 'Sass'],
+      ['express', 'Express.js'],
+      ['rn', 'React Native'],
+      ['bootstrap', 'Bootstrap'],
+      ['git', 'Git'],
+      ['github', 'Github'],
+      ['google', 'Google Maps API'],
+      ['HerokuLogo', 'Heroku'],
+      ['coffee', 'CoffeeScript'],
+      ['jquery', 'jQuery'],
+      ['json', 'JSON'],
+      ['mongo', 'MongoDB'],
+      ['node', 'Node.js'],
+      ['postgresql', 'PostgreSQL'],
+      ['ajax', 'AJAX'],
+      ['rspec', 'RSpec']
     ]
 
     const contacts = [
@@ -63,7 +84,7 @@ class App extends Component {
     function renderImage() {
       var images = skills
       return images.map((image, index) =>
-        <Skill key={index} background={image}/>
+        <Skill key={index} background={image[0]} info={image[1]}/>
       );
     }
 

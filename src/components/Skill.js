@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 
 const Skill = (props) => {
 
@@ -15,7 +16,11 @@ const Skill = (props) => {
     }
 
   return(
-    <div style={picStyle} />
+    <a data-tip={props.info}>
+      <div style={picStyle}>
+        <ReactTooltip class='tooltipStyle'/>
+      </div>
+    </a>
   )
 };
 
