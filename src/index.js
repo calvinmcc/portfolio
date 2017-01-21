@@ -11,6 +11,7 @@ import BannerContent from './components/BannerContent';
 import Project from './components/Project';
 import MainTitle from './components/MainTitle';
 import Contact from './components/Contact';
+import DownloadButton from './components/DownloadButton';
 
 class App extends Component {
   render() {
@@ -136,11 +137,16 @@ class App extends Component {
         <Banner bgColor="rgb(71, 121, 173)" bgImage="">
           <BannerContent spacing="space-around">
             {renderContact()}
+            <DownloadButton file='resume.pdf'
+                            name='CalvinMcConnellResume'
+                            label='Download Resume'
+                          />
           </BannerContent>
           <BannerTitle title="CONTACT"
                        bgColor="rgb(31, 33, 75)"
                        fontColor="white" />
         </Banner>
+
       </div>
     );
   }
