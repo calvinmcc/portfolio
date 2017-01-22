@@ -8,10 +8,14 @@ const Contact = (props) => {
     height: '7vw',
     display: 'flex',
     position: 'auto',
-    marginLeft: '5vw'
+    marginLeft: '5vw',
+    marginTop: '8vw'
   }
   return(
-    <FontAwesome style={contactStyle} name={props.contactName} size='3x' />
+    <FontAwesome style={contactStyle}
+      name={props.contactName}
+      size='3x'
+      className="contactLink"/>
   )
 }
 

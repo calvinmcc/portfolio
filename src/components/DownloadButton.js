@@ -10,7 +10,8 @@ const DownloadButton = (props) => {
     justifyContent: 'center',
     fontFamily: 'Hind Vadodara',
     fontSize: '1.5vw',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: '5vw'
   }
 
   return(
