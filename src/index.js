@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FontAwesome from 'react-fontawesome';
 import ReactTooltip from 'react-tooltip';
+import { StickyContainer, Sticky } from 'react-sticky';
 import Banner from './components/Banner';
 import MainPicture from './components/MainPicture';
 import Bio from './components/Bio';
@@ -12,6 +13,7 @@ import Project from './components/Project';
 import MainTitle from './components/MainTitle';
 import Contact from './components/Contact';
 import DownloadButton from './components/DownloadButton';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
@@ -99,9 +101,12 @@ class App extends Component {
     }
 
     return (
-      <div>
-        <Banner bgColor="" bgImage="background.JPG">
-          <BannerContent spacing="space-around">
+      <StickyContainer>
+        <Banner bgColor="rgba(255, 255, 255, 0)"
+                bgImage="background.JPG"
+                height="100vh"
+                >
+          <BannerContent spacing="space-around" width="95vw">
             <MainTitle title="Calvin Everett McConnell"
                        subheading1="Web Developer"
                        subheading2="Vancouver, BC"
@@ -109,16 +114,18 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="rgb(47, 40, 43)" bgImage="">
+        <Navbar />
+
+        <Banner bgColor="rgb(47, 40, 43)" height="85vh" id="bio">
           <BannerTitle title="BIO" bgColor="black" fontColor="white" />
-          <BannerContent spacing="space-around">
+          <BannerContent spacing="space-around" width="90vw">
             <MainPicture />
             <Bio />
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="white">
-          <BannerContent spacing="space-between">
+        <Banner bgColor="white" height="85vh" id="skills">
+          <BannerContent spacing="space-between" width="90vw">
             {renderImage()}
           </BannerContent>
           <BannerTitle title="SKILLS"
@@ -126,16 +133,16 @@ class App extends Component {
                        fontColor="white"/>
         </Banner>
 
-        <Banner bgColor="rgb(31, 33, 75)" bgImage="">
+        <Banner bgColor="rgb(31, 33, 75)" height="85vh" id="projects">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
-          <BannerContent spacing="space-between">
+          <BannerContent spacing="space-between" width="90vw">
             <Project projectContent={projects[0]}/>
             <Project projectContent={projects[1]}/>
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="rgb(71, 121, 173)" bgImage="">
-          <BannerContent spacing="space-around">
+        <Banner bgColor="rgb(71, 121, 173)" height="85vh" id="contact">
+          <BannerContent spacing="space-around" width="90vw">
             {renderContact()}
             <DownloadButton file='resume.pdf'
                             name='CalvinMcConnellResume'
@@ -147,7 +154,7 @@ class App extends Component {
                        fontColor="white" />
         </Banner>
 
-      </div>
+      </StickyContainer>
     );
   }
 }

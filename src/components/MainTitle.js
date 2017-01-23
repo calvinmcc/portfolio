@@ -5,7 +5,8 @@ const MainTitle = (props) => {
     fontFamily: 'Amatica SC',
     fontSize: '350%',
     color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: '5%'
   }
 
   const subheadingStyle = {

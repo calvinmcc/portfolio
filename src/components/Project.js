@@ -35,8 +35,8 @@ const Project = (props) => {
   const containerStyle = {
     display: 'flex',
     alignItems: 'center',
-    padding: '0px',
-    margin: '1'
+    padding: '0vw',
+    margin: '0vw'
   }
 
   const { title, description, source, link, image } = props.projectContent

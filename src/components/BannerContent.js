@@ -4,7 +4,7 @@ const BannerContent = (props) => {
 
   const bannerContentStyle = {
     margin: 0,
-    width: "90vw",
+    width: props.width,
     display: 'flex',
     justifyContent: props.spacing,
     alignItems: 'center',

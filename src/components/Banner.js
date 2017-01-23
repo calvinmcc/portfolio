@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 
 const Banner = (props) => {
 
@@ -6,18 +7,19 @@ const Banner = (props) => {
       display: 'flex',
       justifyContent: 'space-between',
       width: '100vw',
-      height: '80vh',
+      height: props.height,
       backgroundColor: props.bgColor,
-      backgroundImage: `url(${props.bgImage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'
     };
 
     return (
-      <div style={bannerStyle}>
-        {props.children}
-      </div>
+      <Parallax bgImage={props.bgImage} strength={200}>
+        <div style={bannerStyle} id={props.id}>
+          {props.children}
+        </div>
+      </Parallax>
     )
 };
 
