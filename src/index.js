@@ -128,7 +128,7 @@ class App extends Component {
 
         <Banner bgColor="rgb(31, 33, 75)" bgImage="">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
-          <BannerContent spacing="space-around">
+          <BannerContent spacing="space-between">
             <Project projectContent={projects[0]}/>
             <Project projectContent={projects[1]}/>
           </BannerContent>

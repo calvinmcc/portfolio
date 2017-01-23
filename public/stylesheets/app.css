@@ -16,6 +16,10 @@ a:visited {
   font-family: 'Hind Vadodara'
 }
 
+.contactStyle:hover {
+  color: rgb(95, 201, 223);
+}
+
 .hvr-shutter-in-horizontal {
   display: inline-block;
   vertical-align: middle;

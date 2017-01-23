@@ -1,38 +1,72 @@
 import React from 'react';
+import FontAwesome from 'react-fontawesome';
 
 const Project = (props) => {
   const projectStyle = {
     backgroundColor: 'rgba(255, 255, 255, 0)',
-    width: '34vw',
-    height: '34vw',
-    margin: '1em',
-    padding: '1em',
+    width: '80vw',
+    height: '20vw',
     overflow: 'scroll',
-    fontSize: '1 rem',
+    fontSize: '1.2vw',
     borderRadius: '2%',
     fontFamily: 'Hind Vadodara',
     textAlign: 'justify',
     textDecoration: 'none',
-    color: 'white'
+    color: 'white',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignContent: 'space-between'
   }
 
   const imageStyle ={
-    width: '34vw',
-    height: '20vw',
-    borderRadius: '2%'
+    width: '28vw',
+    height: '15vw',
+    borderRadius: '2%',
+    marginRight: '2vw'
+  }
+
+  const linkStyle = {
+    fontFamily: 'Hind Vadodara',
+    fontSize: '2vw',
+    textDecoration: 'none',
+    fontColor: 'black'
+  }
+
+  const containerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0px',
+    margin: '1'
   }
 
   const { title, description, source, link, image } = props.projectContent
 
   return(
     <div style={projectStyle}>
-      <a href={link}><img style={imageStyle} src={image} /></a>
-      <h3><a href={link} style={{fontFamily: 'Russo One',
-                                 size: '2vw',
-                                 textDecoration: 'none',
-                                 fontColor: 'black'}}>{title}</a></h3>
-      <p>{description}</p>
-      <h5><a href={source}>Source Code</a></h5>
+      <div style={containerStyle}>
+        <a href={link}>
+          <img style={imageStyle} src={image} />
+        </a>
+      </div>
+      <div style={containerStyle}>
+          <p>
+          <h3>
+            <a href={link} style={linkStyle}>
+              {title}
+              &nbsp; &nbsp;
+              <FontAwesome name="arrow-circle-right" size="lg"  />
+            </a>
+          </h3>
+          {description}
+          <h5>
+            <a href={source}>
+              Source Code
+              &nbsp; &nbsp;
+              <FontAwesome name="arrow-circle-right" size="lg"  />
+            </a>
+          </h5>
+        </p>
+      </div>
     </div>
   );
 }
