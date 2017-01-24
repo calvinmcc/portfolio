@@ -28,7 +28,7 @@ class App extends Component {
                       jQuery on the front-end. Tripcast uses the Google Maps,
                       Amadeus Hotel, myGasFeed, and DarkSky APIs for the data.`,
         source:       "https://github.com/calvinmcc/tripcast",
-        link:         "https://tripcast.herokuapp.com/",
+        link:         "http://www.tripcast.io",
         image:        "tripcast.png"
       },
       {
@@ -116,7 +116,12 @@ class App extends Component {
 
         <Navbar />
 
-        <Banner bgColor="rgb(47, 40, 43)" height="85vh" id="bio">
+        <div id="bio" style={{marginTop: '85vh',
+                              position: 'absolute',
+                              zIndex: '5',
+                              height: '0'
+                            }}></div>
+        <Banner bgColor="rgb(47, 40, 43)" height="85vh">
           <BannerTitle title="BIO" bgColor="black" fontColor="white" />
           <BannerContent spacing="space-around" width="90vw">
             <MainPicture />
@@ -124,7 +129,12 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="white" height="85vh" id="skills">
+        <div id="skills" style={{marginTop: '85vh',
+                                 position: 'absolute',
+                                 zIndex: '5',
+                                 height: '0'
+                                }}></div>
+        <Banner bgColor="white" height="85vh">
           <BannerContent spacing="space-between" width="90vw">
             {renderImage()}
           </BannerContent>
@@ -133,7 +143,12 @@ class App extends Component {
                        fontColor="white"/>
         </Banner>
 
-        <Banner bgColor="rgb(31, 33, 75)" height="85vh" id="projects">
+        <div id="projects" style={{marginTop: '85vh',
+                                   position: 'absolute',
+                                   zIndex: '5',
+                                   height: '0'
+                                  }}></div>
+        <Banner bgColor="rgb(31, 33, 75)" height="85vh">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-between" width="90vw">
             <Project projectContent={projects[0]}/>
@@ -141,7 +156,12 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <Banner bgColor="rgb(71, 121, 173)" height="85vh" id="contact">
+        <div id="contact" style={{marginTop: '85vh',
+                                  position: 'absolute',
+                                  zIndex: '5',
+                                  height: '0'
+                                }}></div>
+        <Banner bgColor="rgb(71, 121, 173)" height="85vh">
           <BannerContent spacing="space-around" width="90vw">
             {renderContact()}
             <DownloadButton file='resume.pdf'
