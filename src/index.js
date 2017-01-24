@@ -116,20 +116,20 @@ class App extends Component {
 
         <Navbar />
 
-        <div id="bio" style={{marginTop: '85vh',
+        <div id="bio" style={{marginTop: '-15vh',
                               position: 'absolute',
                               zIndex: '5',
                               height: '0'
                             }}></div>
         <Banner bgColor="rgb(47, 40, 43)" height="85vh">
-          <BannerTitle title="BIO" bgColor="black" fontColor="white" />
+          <BannerTitle title="BIO" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-around" width="90vw">
             <MainPicture />
             <Bio />
           </BannerContent>
         </Banner>
 
-        <div id="skills" style={{marginTop: '85vh',
+        <div id="skills" style={{marginTop: '-15vh',
                                  position: 'absolute',
                                  zIndex: '5',
                                  height: '0'
@@ -143,12 +143,12 @@ class App extends Component {
                        fontColor="white"/>
         </Banner>
 
-        <div id="projects" style={{marginTop: '85vh',
+        <div id="projects" style={{marginTop: '-15vh',
                                    position: 'absolute',
                                    zIndex: '5',
                                    height: '0'
                                   }}></div>
-        <Banner bgColor="rgb(31, 33, 75)" height="85vh">
+        <Banner bgColor="rgb(47, 40, 43)" height="85vh">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-between" width="90vw">
             <Project projectContent={projects[0]}/>
@@ -156,12 +156,12 @@ class App extends Component {
           </BannerContent>
         </Banner>
 
-        <div id="contact" style={{marginTop: '85vh',
+        <div id="contact" style={{marginTop: '-15vh',
                                   position: 'absolute',
                                   zIndex: '5',
                                   height: '0'
                                 }}></div>
-        <Banner bgColor="rgb(71, 121, 173)" height="85vh">
+        <Banner bgColor="white" height="85vh">
           <BannerContent spacing="space-around" width="90vw">
             {renderContact()}
             <DownloadButton file='resume.pdf'
@@ -170,7 +170,7 @@ class App extends Component {
                           />
           </BannerContent>
           <BannerTitle title="CONTACT"
-                       bgColor="rgb(31, 33, 75)"
+                       bgColor="rgb(47, 40, 43)"
                        fontColor="white" />
         </Banner>
 

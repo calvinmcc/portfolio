@@ -11,7 +11,9 @@ const DownloadButton = (props) => {
     fontFamily: 'Hind Vadodara',
     fontSize: '1.5vw',
     textAlign: 'center',
-    marginBottom: '5vw'
+    marginBottom: '5vw',
+    border: '1px solid rgba(47, 126, 126, 0.86)',
+    color: 'rgba(47, 126, 126, 0.86)'
   }
 
   return(

@@ -3,7 +3,7 @@ import FontAwesome from 'react-fontawesome';
 
 const Contact = (props) => {
   const contactStyle = {
-    color: 'white',
+    color: 'rgba(47, 126, 126, 0.86)',
     width: '7vw',
     height: '7vw',
     display: 'flex',

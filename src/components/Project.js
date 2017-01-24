@@ -6,7 +6,6 @@ const Project = (props) => {
     backgroundColor: 'rgba(255, 255, 255, 0)',
     width: '80vw',
     height: '20vw',
-    overflow: 'scroll',
     fontSize: '1.2vw',
     borderRadius: '2%',
     fontFamily: 'Hind Vadodara',

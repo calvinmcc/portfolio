@@ -23,13 +23,29 @@ const Navbar = () => {
     justifyContent: 'space-around'
   }
 
+  const headerStyle = {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  }
+
   return(
     <div style={navStyle}>
       <Sticky style={stickyStyle}>
-        <a href="#bio">BIO</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#bio" style={headerStyle} className="hvr-underline-from-center">
+          <a>BIO</a>
+        </a>
+        <a href="#skills" style={headerStyle} className="hvr-underline-from-center">
+          <a>SKILLS</a>
+        </a>
+        <a href="#projects" style={headerStyle} className="hvr-underline-from-center">
+          <a>PROJECTS</a>
+        </a>
+        <a href="#contact" style={headerStyle} className="hvr-underline-from-center">
+          <a>CONTACT</a>
+        </a>
       </Sticky>
     </div>
   )
