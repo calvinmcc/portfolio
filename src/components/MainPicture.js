@@ -3,8 +3,8 @@ import React from 'react';
 const MainPicture = () => {
 
   const picStyle = {
-    width: '50vh',
-    height: '50vh',
+    height: '45vh',
+    width: '45vh',
     backgroundImage: `url(hi.jpg)`,
     borderRadius: '50%',
     backgroundPosition: 'center',

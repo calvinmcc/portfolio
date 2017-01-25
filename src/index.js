@@ -154,7 +154,7 @@ class App extends Component {
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
           <BannerContent spacing="space-between"
                          width="90vw"
-                         responsive="">
+                         responsive="projectResponsive">
             <Project projectContent={projects[0]}/>
             <Project projectContent={projects[1]}/>
           </BannerContent>
