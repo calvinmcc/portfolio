@@ -35,20 +35,21 @@ const Project = (props) => {
     display: 'flex',
     alignItems: 'center',
     padding: '0vw',
-    margin: '0vw'
+    margin: '0vw',
+    height: '20vw'
   }
 
   const { title, description, source, link, image } = props.projectContent
 
   return(
-    <div style={projectStyle}>
+    <div style={projectStyle} className="responsive">
       <div style={containerStyle}>
         <a href={link}>
           <img style={imageStyle} src={image} />
         </a>
       </div>
-      <div style={containerStyle}>
-          <p>
+      <div style={containerStyle} className="responsive">
+          <div>
           <h3>
             <a href={link} style={linkStyle}>
               {title}
@@ -64,7 +65,7 @@ const Project = (props) => {
               <FontAwesome name="arrow-circle-right" size="lg"  />
             </a>
           </h5>
-        </p>
+        </div>
       </div>
     </div>
   );

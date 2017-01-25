@@ -13,7 +13,9 @@ const BannerContent = (props) => {
   }
 
   return(
-    <div style={bannerContentStyle}>{props.children}</div>
+    <div style={bannerContentStyle} className={props.responsive}>
+      {props.children}
+    </div>
   )
 }
 

@@ -123,7 +123,9 @@ class App extends Component {
                             }}></div>
         <Banner bgColor="rgb(47, 40, 43)" height="85vh">
           <BannerTitle title="BIO" bgColor="white" fontColor="black" />
-          <BannerContent spacing="space-around" width="90vw">
+          <BannerContent spacing="space-around"
+                         width="90vw"
+                         responsive="responsive">
             <MainPicture />
             <Bio />
           </BannerContent>
@@ -150,7 +152,9 @@ class App extends Component {
                                   }}></div>
         <Banner bgColor="rgb(47, 40, 43)" height="85vh">
           <BannerTitle title="PROJECTS" bgColor="white" fontColor="black" />
-          <BannerContent spacing="space-between" width="90vw">
+          <BannerContent spacing="space-between"
+                         width="90vw"
+                         responsive="">
             <Project projectContent={projects[0]}/>
             <Project projectContent={projects[1]}/>
           </BannerContent>
@@ -162,16 +166,23 @@ class App extends Component {
                                   height: '0'
                                 }}></div>
         <Banner bgColor="white" height="85vh">
-          <BannerContent spacing="space-around" width="90vw">
-            {renderContact()}
-            <DownloadButton file='resume.pdf'
-                            name='CalvinMcConnellResume'
-                            label='Download Resume'
-                          />
+          <BannerContent width="90vw" spacing="space-around"
+                         responsive="contactResponsive">
+            <BannerContent spacing="space-around"
+                           responsive="contactResponsive2"
+                           >
+              {renderContact()}
+            </BannerContent>
+            <BannerContent spacing="space-around">
+              <DownloadButton file='resume.pdf'
+                              name='CalvinMcConnellResume'
+                              label='Download Resume'
+                            />
+            </BannerContent>
           </BannerContent>
-          <BannerTitle title="CONTACT"
-                       bgColor="rgb(47, 40, 43)"
-                       fontColor="white" />
+            <BannerTitle title="CONTACT"
+                         bgColor="rgb(47, 40, 43)"
+                         fontColor="white" />
         </Banner>
 
       </StickyContainer>

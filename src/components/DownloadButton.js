@@ -2,14 +2,14 @@ import React from 'react';
 
 const DownloadButton = (props) => {
   const downloadButtonStyle = {
-    height: '10vw',
-    width: '10vw',
+    height: '20vh',
+    width: '20vh',
     borderRadius: '50%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'Hind Vadodara',
-    fontSize: '1.5vw',
+    fontSize: '3vh',
     textAlign: 'center',
     marginBottom: '5vw',
     border: '1px solid rgba(47, 126, 126, 0.86)',

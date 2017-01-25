@@ -3,8 +3,8 @@ import React from 'react';
 const MainPicture = () => {
 
   const picStyle = {
-    width: '30vw',
-    height: '30vw',
+    width: '50vh',
+    height: '50vh',
     backgroundImage: `url(hi.jpg)`,
     borderRadius: '50%',
     backgroundPosition: 'center',
@@ -12,7 +12,9 @@ const MainPicture = () => {
   }
 
   return(
-    <div style={picStyle} />
+    <div style={picStyle} className="imgResponsive">
+      <div className="imgResponsive" />
+    </div>
   )
 };
 

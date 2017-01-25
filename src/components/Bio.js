@@ -15,7 +15,7 @@ const Bio = () => {
 
   return (
     <div style={bioStyle}>
-      <p>
+      <p className="bioResponsive">
         Born and raised in La Crosse, Wisconsin, I moved to Vancouver in 2009 to
         take advantage of my dual citizenship. In 2013 I graduated from Trinity
         Western with a 3.3 GPA, finishing on the Dean's list my final four
