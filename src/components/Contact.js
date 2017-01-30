@@ -13,8 +13,10 @@ const Contact = (props) => {
     marginTop: '8vw'
   }
   return(
-    <FontAwesome style={contactStyle} name={props.contactName}
-      size='3x'/>
+    <FontAwesome style={contactStyle}
+                 name={props.contactName}
+                 size='3x'
+                 className="hvr-bob"/>
   )
 }
 
